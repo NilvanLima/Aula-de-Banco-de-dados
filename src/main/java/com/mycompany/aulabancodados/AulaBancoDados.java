@@ -11,24 +11,49 @@ public class AulaBancoDados {
             op = Integer.parseInt(JOptionPane.showInputDialog(menu));
             switch (op){
                 case 1:{
-                 String nome = JOptionPane.showInputDialog("Qual é o nome?");
-                 String fone = JOptionPane.showInputDialog("Qual é o telefone?");
-                 String email = JOptionPane.showInputDialog("Qual é o email?");
+                    String nome = JOptionPane.showInputDialog("Qual é o nome?");
+                    String fone = JOptionPane.showInputDialog("Qual é o telefone?");
+                    String email = JOptionPane.showInputDialog("Qual é o email?");
                          
-                 Pessoa p = new Pessoa();
-                 p.setNome(nome);
-                 p.setFone(fone);
-                 p.setEmail(email);
+                    Pessoa p = new Pessoa();
+                    p.setNome(nome);
+                    p.setFone(fone);
+                    p.setEmail(email);
                  
-                 p.inserir();
+                    p.inserir();
                  break;
                 }                    
-                case 2:
-                    break;
-                case 3:
-                    break;
-                case 4: 
-                    break;
+                case 2:{
+                    String nome = JOptionPane.showInputDialog("Qual é o nome?");
+                    String fone = JOptionPane.showInputDialog("Qual é o telefone?");
+                    String email = JOptionPane.showInputDialog("Qual é o email?");
+                    int codigo = Integer.parseInt(JOptionPane.showInputDialog("Qual é o código?"));
+                 
+                    Pessoa p = new Pessoa();
+                    
+                    p.setNome(nome);
+                    p.setFone(fone);
+                    p.setEmail(email);
+                    p.setCodigo(codigo);
+                    
+                    p.atualizar();
+                 
+                 break;   
+                }                    
+                case 3:{
+                    int codigo = Integer.parseInt(JOptionPane.showInputDialog("Qual é o código?"));                    
+                    Pessoa p = new Pessoa();                   
+                    p.setCodigo(codigo);
+                    p.deletar();
+                    
+                    break;   
+                }                    
+                case 4:{
+                    Pessoa p = new Pessoa();
+                    p.listar();
+                    
+                    break;   
+                }                    
                 case 0:
                     break;
                 default:
